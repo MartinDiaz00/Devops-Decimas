@@ -1,0 +1,6 @@
+services:
+  supermercado:
+    build: .
+    container_name: supermercado-devops
+    ports:
+      - "8080:8080"

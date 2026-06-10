@@ -1,0 +1,21 @@
+COMANDOS RAPIDOS - SUPERMERCADO DEVOPS
+
+LOCAL CON DOCKER:
+docker build -t supermercado-microservicio .
+docker run -p 8080:8080 supermercado-microservicio
+
+PROBAR:
+http://localhost:8080
+http://localhost:8080/api/supermercado/ping
+http://localhost:8080/api/supermercado/productos
+
+KUBERNETES / EKS:
+kubectl apply -f k8s/back.yml
+kubectl get pods
+kubectl get svc supermercado-service
+
+CUANDO APAREZCA EL DNS O EXTERNAL-IP:
+abrir http://DNS_DEL_LOAD_BALANCER
+
+ENDPOINT DE PING PARA MOSTRAR:
+http://DNS_DEL_LOAD_BALANCER/api/supermercado/ping
